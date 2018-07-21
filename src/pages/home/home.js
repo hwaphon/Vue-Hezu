@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 16:18:08
+* @Last Modified time: 2018-07-21 16:37:45
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -11,7 +11,23 @@ import API from '@/const/api.js'
 export default {
   data () {
     return {
-      list: [],
+      list: [
+        {
+          id: 9999,
+          title: '测试房源',
+          image: 'https://dummyimage.com/300x250/f4f9f4&text=%E6%88%BF%E6%BA%90',
+          house_type: {
+            room: 1,
+            hall: 2,
+            bathroom: 2
+          },
+          area: 20,
+          regin: '浦东新区',
+          address: '凌兆路',
+          price: 2000,
+          tags: ['位置好', '便宜']
+        }
+      ],
       // 首次进入时加载数据
       initLoading: true,
       // 上拉刷新
@@ -23,9 +39,6 @@ export default {
 
   components: {
     'fang-item': FangItem
-  },
-
-  watch: {
   },
 
   methods: {
@@ -41,12 +54,18 @@ export default {
         this.list = this.list.concat(res.data.data.list)
         this.loading = false
       })
+    },
+    onFangClick (id) {
+      this.routerToFangDetail(id)
+    },
+    routerToFangDetail (id) {
+      this.$router.push(`/detail/${id}`)
     }
   },
 
   created () {
     this.getList().then((res) => {
-      this.list = res.data.data.list
+      this.list = this.list.concat(res.data.data.list)
       this.initLoading = false
     })
 

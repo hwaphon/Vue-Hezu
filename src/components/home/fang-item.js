@@ -2,8 +2,11 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 10:46:03
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 15:08:23
+* @Last Modified time: 2018-07-21 16:35:01
 */
+
+import Event from '@/const/event.js'
+
 export default {
   props: {
     title: String,
@@ -23,6 +26,12 @@ export default {
     },
     address: String,
     price: Number,
-    image: String
+    image: String,
+    id: Number
+  },
+  methods: {
+    onClick () {
+      this.$emit(Event.CLICK, this.id)
+    }
   }
 }

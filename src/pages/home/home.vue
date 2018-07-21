@@ -7,6 +7,7 @@
     </div>
     <div class="fang-list">
       <fang-item
+        @onClick="onFangClick"
         v-for="(item,index) in list"
         :key="index"
         :id="item.id"

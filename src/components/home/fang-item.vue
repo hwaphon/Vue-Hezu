@@ -1,5 +1,5 @@
 <template>
-  <div class="fang-item">
+  <div class="fang-item" @click="onClick">
     <img :src="image" class="fang-img">
     <div class="fang-info">
       <span class="fang-name">{{ title }}</span>
