@@ -1,0 +1,130 @@
+/*
+* @Author: hwaphon
+* @Date:   2018-07-21 10:45:57
+* @Last Modified by:   hwaphon
+* @Last Modified time: 2018-07-21 15:05:20
+*/
+
+.fang-item {
+  z-index: 1;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  padding: 10px;
+  border-bottom: 1px solid #e7e7e7;
+  text-decoration: none;
+}
+
+span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+}
+
+.fang-img {
+  display: block;
+  width: 100px;
+  height: 75px;
+
+  border-radius: 4px;
+}
+
+.fang-info {
+  font-size: 1.3rem;
+  display: block;
+  -webkit-box-flex: 1;
+  margin-left: 10px;
+}
+
+.fang-area {
+  margin-left: 16px;
+}
+
+.fang-name {
+  display: -webkit-box;
+  font-size: 1.5rem;
+  margin-top: -1px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #333;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: initial;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fang-type {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  em {
+    font-style: normal;
+  }
+}
+
+.fang-address {
+  display: -webkit-box;
+}
+
+.fang-addr-ab {
+  display: block;
+  -webkit-box-flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+label {
+  display: block;
+  -webkit-box-flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fang-price {
+  text-align: right;
+  color: #f60;
+  min-width: 80px;
+}
+
+.fang-price em {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fang-tags {
+  overflow: hidden;
+}
+
+.fang-tags em {
+  box-sizing: border-box;
+  float: left;
+  padding: 2px 8px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 2px;
+  margin-right: 9px;
+  font-size: 1.2rem;
+  font-style: normal;
+
+  &:nth-child(n) {
+    background: #edfbee;
+    color: #5ec86f;
+  }
+
+  &:nth-child(2n) {
+    background: #fff3e6;
+    color: #ffa626;
+  }
+
+  &:nth-child(3n) {
+    background: #ecf5ff;
+    color: #7bbdeb;
+  }
+}

@@ -1,6 +1,24 @@
 <template>
   <div class="home">
-    <span></span>
+    <van-nav-bar title="房源列表" class="navigation" />
+    <div class="init-loading"  v-if="initLoading">
+      <van-loading type="spinner" color="black"/>
+      <p>加载中...</p>
+    </div>
+    <div class="fang-list">
+      <fang-item
+        v-for="item in list"
+        :key="item.id"
+        :title="item.title"
+        :house_type="item.house_type"
+        :area="item.area"
+        :regin="item.regin"
+        :tags="item.tags"
+        :address="item.address"
+        :price="item.price"
+        :image="item.image">
+      </fang-item>
+    </div>
   </div>
 </template>
 

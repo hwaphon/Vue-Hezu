@@ -20,13 +20,14 @@
 
 ### 工具
 
-    框架： Vue
-    路由： Vue-Router
-    状态管理： Vuex
-    图标： 已引入 font-awesome，如果使用 iconfont 可自行下载放置到 src/assets
-    移动端组件库： Vant
-    网络请求： axios, 在组件中直接调用 this.$http 即可使用。
-    工具类： underscore, 在组件中直接调用 this.util 即可使用。
-    数据： Easy-Mock（待创建）
+  框架： Vue
+  路由： Vue-Router
+  状态管理： Vuex
+  图标： 已引入 font-awesome，如果使用 iconfont 可自行下载放置到 src/assets
+  移动端组件库： Vant，已全局引入，直接使用组件即可。
+  网络请求： axios, 在组件中直接调用 this.$http 即可使用。
+  工具类： underscore, 在组件中直接调用 this.util 即可使用。
+  数据： Easy-Mock（已创建）
+  CSS预处理器：SCSS
 
 

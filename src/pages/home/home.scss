@@ -2,9 +2,33 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:12
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 08:59:56
+* @Last Modified time: 2018-07-21 15:18:06
 */
 
-.fa {
-  font-size: 24px;
+
+.init-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 88px;
+  height: 88px;
+
+  z-index: 9;
+
+  background-color: rgba(0,0,0,.5);
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  color: #FFF;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    margin-top: 8px;
+  }
 }
