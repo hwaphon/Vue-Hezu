@@ -27,7 +27,7 @@
     移动端组件库： Vant，已全局引入，直接使用组件即可。
     网络请求： axios, 在组件中直接调用 this.$http 即可使用。
     工具类： underscore, 在组件中直接调用 this.util 即可使用。
-    数据： Easy-Mock（已创建）
+    数据： Apizza（Mock 服务）
     CSS预处理器：SCSS
     代码校验：ESLint
 

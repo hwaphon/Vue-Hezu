@@ -2,12 +2,13 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 20:29:41
+* @Last Modified time: 2018-07-21 22:14:50
 */
 
 import FangItem from '@/components/home/fang-item.vue'
 import API from '@/const/api.js'
 import { mapActions } from 'vuex'
+import { Toast } from 'vant'
 
 export default {
   data () {
@@ -46,7 +47,7 @@ export default {
     getList (page = 0) {
       let pagesize = this.pagesize
       this.page = page + 1
-      return this.$http.get(`${API.LIST}page=${page}&pagesize=${pagesize}`)
+      return this.$http.get(`${API.LIST}page=${page}&pagesize=${pagesize}`, { timeout: 3000 })
     },
     onReachBottom () {
       this.loading = true
@@ -65,10 +66,17 @@ export default {
   },
 
   created () {
-    this.getList().then((res) => {
-      this.list = this.list.concat(res.data.data.list)
-      this.initLoading = false
-    })
+    this.getList()
+      .then((res) => {
+        this.list = this.list.concat(res.data.data.list)
+        this.initLoading = false
+      })
+      .catch((error) => {
+        Toast({
+          type: 'fail',
+          message: '加载出错'
+        })
+      })
 
     window.onscroll = () => {
       //变量scrollTop是滚动条滚动时，距离顶部的距离
@@ -79,7 +87,7 @@ export default {
       var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight
                  //滚动条到底部的条件
       if(scrollTop + windowHeight == scrollHeight) {
-        if (!this.loading) {
+        if (!this.initLoading && !this.loading) {
           console.log('bottom');
           this.onReachBottom()
         }
