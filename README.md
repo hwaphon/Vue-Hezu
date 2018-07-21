@@ -31,4 +31,8 @@
     CSS预处理器：SCSS
     代码校验：ESLint
 
+### 提示
+
+    1. CSS 单位用 rem， 已将 html 的 font-size 设置为 10px（即以 10px 为基准）
+
 

@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 10:45:57
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 15:05:20
+* @Last Modified time: 2018-07-21 20:18:47
 */
 
 .fang-item {
@@ -10,22 +10,22 @@
   position: relative;
   display: -webkit-box;
   -webkit-box-flex: 1;
-  padding: 10px;
-  border-bottom: 1px solid #e7e7e7;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #e7e7e7;
   text-decoration: none;
 }
 
 span {
   display: block;
-  height: 20px;
-  line-height: 20px;
+  height: 2rem;
+  line-height: 2rem;
   color: #666;
 }
 
 .fang-img {
   display: block;
-  width: 100px;
-  height: 75px;
+  width: 10rem;
+  height: 7.5rem;
 
   border-radius: 4px;
 }
@@ -34,19 +34,19 @@ span {
   font-size: 1.3rem;
   display: block;
   -webkit-box-flex: 1;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 .fang-area {
-  margin-left: 16px;
+  margin-left: 1.6rem;
 }
 
 .fang-name {
   display: -webkit-box;
   font-size: 1.5rem;
   margin-top: -1px;
-  height: 20px;
-  line-height: 20px;
+  height: 2rem;
+  line-height: 2rem;
   font-weight: 700;
   color: #333;
   -webkit-line-clamp: 1;
@@ -89,7 +89,7 @@ label {
 .fang-price {
   text-align: right;
   color: #f60;
-  min-width: 80px;
+  min-width: 8rem;
 }
 
 .fang-price em {
@@ -105,11 +105,11 @@ label {
 .fang-tags em {
   box-sizing: border-box;
   float: left;
-  padding: 2px 8px;
-  line-height: 16px;
+  padding: 0.2rem 0.8rem;
+  line-height: 1.6rem;
   text-align: center;
-  border-radius: 2px;
-  margin-right: 9px;
+  border-radius: 0.2rem;
+  margin-right: 0.9rem;
   font-size: 1.2rem;
   font-style: normal;
 
