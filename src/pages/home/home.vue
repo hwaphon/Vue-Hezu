@@ -8,8 +8,8 @@
     <div class="fang-list">
       <fang-item
         @onClick="onFangClick"
-        v-for="(item,index) in list"
-        :key="index"
+        v-for="item in list"
+        :key="item.id"
         :id="item.id"
         :title="item.title"
         :house_type="item.house_type"

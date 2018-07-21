@@ -36,5 +36,8 @@ export default new Router({
       name: 'FangDetail',
       component: FangDetail
     }
-  ]
+  ],
+  scrollBehavior (to, from, savePosition) {
+    return { x: 0, y: 0 }
+  }
 })

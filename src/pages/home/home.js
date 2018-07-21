@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 22:14:50
+* @Last Modified time: 2018-07-22 06:27:39
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -93,5 +93,8 @@ export default {
         }
       }   
    }
+  },
+  beforeDestroy () {
+    window.onscroll = null
   }
 }
