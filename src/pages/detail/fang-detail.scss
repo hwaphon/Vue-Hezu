@@ -2,10 +2,11 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 16:23:29
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 20:16:25
+* @Last Modified time: 2018-07-21 21:17:02
 */
 
 $default-color: #999;
+$default-border-color: #E6E6E6;
 $default-margin: 1.2rem;
 $origin-color: #e54b00;
 
@@ -26,10 +27,14 @@ $origin-color: #e54b00;
 }
 
 .detail-info {
-  padding: 1.2rem 1.6rem;
+  padding: 1.2rem 0;
 
   font-size: 1.6rem;
   color: #444;
+}
+
+.detail-title {
+  padding: 0 1.6rem;
 }
 
 .detail-tags-time {
@@ -37,8 +42,8 @@ $origin-color: #e54b00;
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  margin-top: $default-margin;
   font-size: 1.2rem;
+  padding: $default-margin 1.6rem 0;
 }
 
 .detail-time {
@@ -71,8 +76,8 @@ $origin-color: #e54b00;
 }
 
 .detail-basic {
-  border-bottom: 1px solid $default-color;
-  margin-top: $default-margin * 1.5;
+  border-bottom: 1px solid $default-border-color;
+  margin: $default-margin * 1.5 1.6rem 0;
 
   display: flex;
   flex-flow: row nowrap;
@@ -86,7 +91,7 @@ $origin-color: #e54b00;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border-right: 0.1rem solid $default-color;
+    border-right: 0.1rem solid $default-border-color;
 
     &:last-child {
       border-right: none;
@@ -114,9 +119,11 @@ $origin-color: #e54b00;
   margin-top: $default-margin;
   display: flex;
   flex-flow: row wrap;
+  padding: 0 1.6rem;
   color: #444;
   font-size: 16px;
   line-height: 1.5;
+  border-bottom: 1rem solid $default-border-color;
   .more-item {
     flex: 1 1 45%;
     display: flex;
@@ -128,4 +135,19 @@ $origin-color: #e54b00;
     color: $default-color;
     margin-right: 0.4rem;
   }
+}
+
+.detail-des {
+  p {
+    padding: 0 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.des-title {
+  display: block;
+  border-bottom: 0.1rem solid $default-border-color;
+  line-height: 3.6rem;
+
+  padding: 0 1.6rem;
 }

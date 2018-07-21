@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 20:44:50
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 20:51:55
+* @Last Modified time: 2018-07-21 20:56:47
 */
 import { mapActions } from 'vuex'
 
@@ -18,7 +18,6 @@ export default {
   },
 
   created () {
-    console.log('MIXIN CREATED')
     this.toggleTabbar(false)
   }
 }

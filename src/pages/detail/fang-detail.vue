@@ -1,5 +1,6 @@
 <template>
   <div class="fang-detail">
+    <back></back>
     <div class="detail-images">
       <van-swipe :autoplay="3000" class="detail-images-swiper">
         <van-swipe-item v-for="(image, index) in detail.images" :key="index">
@@ -66,6 +67,11 @@
           <span class="more-des">年代:</span>
           <span class="more-content">{{ detail.age }}</span>
         </div>
+      </div>
+
+      <div class="detail-des">
+        <span class="des-title">房源概况</span>
+        <p>{{ detail.des }}</p>
       </div>
     </div>
   </div>
