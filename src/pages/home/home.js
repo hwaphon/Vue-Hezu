@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 20:11:27
+* @Last Modified time: 2018-07-21 20:29:41
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -60,12 +60,8 @@ export default {
       this.routerToFangDetail(id)
     },
     routerToFangDetail (id) {
-      this.toggleTabbar(false)
       this.$router.push(`/detail/${id}`)
-    },
-    ...mapActions([
-      'toggleTabbar'
-    ])
+    }
   },
 
   created () {
