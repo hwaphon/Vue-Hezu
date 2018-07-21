@@ -2,8 +2,12 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 16:23:29
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 17:16:54
+* @Last Modified time: 2018-07-21 19:56:03
 */
+
+$default-color: #999;
+$default-margin: 12px;
+$origin-color: #e54b00;
 
 .detail-images {
   width: 100%;
@@ -33,12 +37,12 @@
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  margin-top: 12px;
+  margin-top: $default-margin;
   font-size: 1.2rem;
 }
 
 .detail-time {
-  color: #cdd5e0;
+  color: $default-color;
 }
 
 .detail-tags em {
@@ -63,5 +67,65 @@
   &:nth-child(3n) {
     background: #ecf5ff;
     color: #7bbdeb;
+  }
+}
+
+.detail-basic {
+  border-bottom: 1px solid $default-color;
+  margin-top: $default-margin * 1.5;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  .detail-item {
+    padding: 8px 0;
+    margin-bottom: $default-margin;
+    flex: 1 1 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.1rem solid $default-color;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .item-content {
+      font-size: 16px;
+      color: $origin-color;
+      font-weight: bold;
+      margin-bottom: $default-margin / 2;
+
+      em {
+        font-style: normal;
+      }
+    }
+
+    .item-des {
+      color: $default-color;
+      font-size: 14px;
+    }
+  }
+}
+
+.detail-more {
+  margin-top: $default-margin;
+  display: flex;
+  flex-flow: row wrap;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+  .more-item {
+    flex: 1 1 45%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: $default-margin * 1.5;
+  }
+
+  .more-des {
+    color: $default-color;
+    margin-right: 4px;
   }
 }

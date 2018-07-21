@@ -29,5 +29,6 @@
     工具类： underscore, 在组件中直接调用 this.util 即可使用。
     数据： Easy-Mock（已创建）
     CSS预处理器：SCSS
+    代码校验：ESLint
 
 

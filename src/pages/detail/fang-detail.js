@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 16:23:37
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 17:01:05
+* @Last Modified time: 2018-07-21 19:04:45
 */
 import API from '@/const/api.js'
 import Vue from 'vue'
@@ -18,7 +18,10 @@ export default {
   },
   data () {
     return {
-      detail: {}
+      detail: {
+        tags: [],
+        house_type: {}
+      }
     }
   },
   methods: {
