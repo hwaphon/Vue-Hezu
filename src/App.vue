@@ -41,4 +41,8 @@ html {
 .fa {
   font-size: 24px;
 }
+
+.tabbar-padding {
+  padding-bottom: 50px;
+}
 </style>

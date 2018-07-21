@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:12
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 15:18:06
+* @Last Modified time: 2018-07-21 15:46:49
 */
 
 
@@ -30,5 +30,20 @@
     line-height: 16px;
     margin: 0;
     margin-top: 8px;
+  }
+}
+
+.pull-loading {
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+
+  span {
+    margin-left: 6px;
   }
 }
