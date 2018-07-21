@@ -1,0 +1,67 @@
+/*
+* @Author: hwaphon
+* @Date:   2018-07-22 07:07:14
+* @Last Modified by:   hwaphon
+* @Last Modified time: 2018-07-22 07:47:21
+*/
+
+$default-border-color: #E6E6E6;
+$default-green-color: #62ab00;
+$default-orange-color: #fb8624;
+
+.contact {
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 99;
+  background-color: #FFF;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 1.4rem;
+
+  bottom: 0;
+  left: 0;
+  border-top: 0.1rem solid $default-border-color;
+
+  & div, 
+  & a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fa {
+    margin-right: 0.4rem;
+  }
+
+  .fa-star {
+    color: $default-orange-color;
+  }
+}
+
+.collect {
+  flex: 0 0 30%;
+  height: 100%;
+}
+
+.apply,
+.tel {
+  flex: 1 1 30%;
+  height: 100%;
+
+  color: #FFF;
+}
+
+.apply {
+  background-color: $default-orange-color;
+}
+
+.tel {
+  display: block;
+  background-color: $default-green-color;
+}
+
+

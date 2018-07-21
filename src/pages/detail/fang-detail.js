@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 16:23:37
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 06:52:12
+* @Last Modified time: 2018-07-22 07:15:10
 */
 import API from '@/const/api.js'
 import Vue from 'vue'
@@ -11,6 +11,7 @@ import TabbarControl from '@/mixins/tabbar_control'
 Vue.use(Lazyload, {})
 
 import Back from '@/components/common/back.vue'
+import Contact from '@/components/detail/contact.vue'
 
 export default {
   mixins: [TabbarControl],
@@ -34,6 +35,7 @@ export default {
     }
   },
   components: {
-    back: Back
+    back: Back,
+    contact: Contact
   }
 }

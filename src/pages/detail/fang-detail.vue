@@ -1,6 +1,7 @@
 <template>
   <div class="fang-detail">
     <back></back>
+    <contact></contact>
     <div class="detail-images">
       <van-swipe :autoplay="3000" class="detail-images-swiper">
         <van-swipe-item v-for="(image, index) in detail.images" :key="index">

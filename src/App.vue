@@ -51,4 +51,8 @@ html {
 .tabbar-padding {
   padding-bottom: 50px;
 }
+
+.van-toast {
+  font-size: 1.6rem;
+}
 </style>

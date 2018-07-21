@@ -40,4 +40,6 @@
 
     3. 如果需要在页面添加返回按钮，请使用 components/common 下的 back 组件。
 
+    4. 如果要弹出 Toast 提示，可直接使用 this.$toast({ message })，更多自定义属性可参见 Vant 中的 Toast
+
 
