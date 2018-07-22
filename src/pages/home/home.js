@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 11:28:47
+* @Last Modified time: 2018-07-22 16:13:02
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -74,12 +74,6 @@ export default {
       .then((res) => {
         this.list = this.list.concat(res.data.data.list)
         this.initLoading = false
-      })
-      .catch((error) => {
-        Toast({
-          type: 'fail',
-          message: '加载出错'
-        })
       })
 
     window.onscroll = () => {

@@ -2,35 +2,15 @@
 * @Author: hwaphon
 * @Date:   2018-07-22 09:21:07
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 12:55:44
+* @Last Modified time: 2018-07-22 14:08:48
 */
+
+import CustomMenu from '@/const/menu-config.js'
+
 export default {
   data () {
     return {
-      menus: [
-        { 
-          title: '区域', 
-          list: [
-            "浦东新区", "闵行区", "宝山区", "徐汇区", "松江区",
-            "嘉定区", "静安区", "普陀区", "杨浦区", "虹口区",
-            "长宁区", "黄浦区", "青浦区", "金山区", "崇明区",
-            "奉贤区"
-          ],
-          selected: -1
-        },
-        { 
-          title: '价格',
-          selected: -1
-        },
-        { 
-          title: '户型',
-          selected: -1
-        },
-        { 
-          title: '面积',
-          selected: -1
-        }
-      ],
+      menus: CustomMenu.menus,
       clickIndex: -1,
       menuContent: [],
 

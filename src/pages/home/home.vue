@@ -1,6 +1,6 @@
 <template>
   <div class="home tabbar-padding">
-    <van-search v-model="search_value" show-action placeholder="请输入搜索关键字" @input="clearSearchState">
+    <van-search v-model="search_value" show-action placeholder="搜索房源" @input="clearSearchState">
       <div slot="action" @click="onSearch" class="search">搜索</div>
     </van-search>
     <div class="init-loading"  v-if="initLoading">

@@ -1,0 +1,80 @@
+/*
+* @Author: hwaphon
+* @Date:   2018-07-22 15:45:44
+* @Last Modified by:   hwaphon
+* @Last Modified time: 2018-07-22 16:12:13
+*/
+
+.hezu-item {
+  padding: 1.6rem;
+  border-bottom: 0.1rem solid #E6E6E6;
+  font-size: 1.6rem;
+}
+
+.hezu-basic {
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hezu-author {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  img {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    margin-right: 0.8rem;
+  }
+}
+
+.author-info {
+  display: flex;
+  flex-flow: column;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.career {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.update-time {
+  font-size: 1.4rem;
+  color: #999;
+}
+
+.hezu-tags {
+  margin-top: 1.6rem;
+
+  span {
+    border: 0.1rem solid #E6E6E6;
+    line-height: 1.6rem;
+    border-radius: 3.2rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+.hezu-des {
+  margin-top: 1.6rem;
+  line-height: 1.5;
+}
+
+.hezu-address {
+  margin-top: 1.6rem;
+  color: #666;
+  
+  span.fa {
+    font-size: 1.4rem;
+  }
+}

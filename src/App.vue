@@ -19,7 +19,7 @@ export default {
       selected: 0,
       menus: [
         { id: 0, title: '首页', icon: 'fa fa-home', path: '/' },
-        { id: 1, title: '合租', icon: 'fa fa-group', path: 'hezu' },
+        { id: 1, title: '求租', icon: 'fa fa-group', path: 'hezu' },
         { id: 2, title: '发布', icon: 'fa fa-edit', path: 'publish' },
         { id: 3, title: '我的', icon: 'fa fa-user-circle', path: 'user' }
       ]
