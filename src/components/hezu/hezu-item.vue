@@ -20,8 +20,15 @@
     </div>
 
     <div class="hezu-address">
-      <span class="fa fa-map-marker"></span>
-      {{ address }}
+      <div class="location">
+        <span class="fa fa-map-marker"></span>
+        {{ address }}
+      </div>
+
+      <div class="hezu-contact">
+        <span class="fa" :class="collectType" @click="onCollectClick"></span>
+        <a class="fa fa-phone" :href="toTel"></a>
+      </div>
     </div>
   </div>
 </template>

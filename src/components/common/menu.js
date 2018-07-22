@@ -2,15 +2,20 @@
 * @Author: hwaphon
 * @Date:   2018-07-22 09:21:07
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 14:08:48
+* @Last Modified time: 2018-07-22 17:13:51
 */
 
-import CustomMenu from '@/const/menu-config.js'
-
 export default {
+  props: {
+    menus: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
   data () {
     return {
-      menus: CustomMenu.menus,
       clickIndex: -1,
       menuContent: [],
 

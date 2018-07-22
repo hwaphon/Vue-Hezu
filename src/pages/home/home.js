@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 16:13:02
+* @Last Modified time: 2018-07-22 17:14:20
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -10,6 +10,8 @@ import API from '@/const/api.js'
 import { mapActions } from 'vuex'
 
 import Menu from '@/components/common/menu.vue'
+import MenuConfig from '@/const/menu-config.js'
+
 import { Toast } from 'vant'
 export default {
   data () {
@@ -23,6 +25,7 @@ export default {
       page: 0,
       search_value: '',
       searched: false,
+      menus: MenuConfig.menus
     }
   },
 
@@ -66,17 +69,8 @@ export default {
         return
       }
       this.searched = !this.searched
-    }
-  },
-
-  created () {
-    this.getList()
-      .then((res) => {
-        this.list = this.list.concat(res.data.data.list)
-        this.initLoading = false
-      })
-
-    window.onscroll = () => {
+    },
+    scrollHandler () {
       //变量scrollTop是滚动条滚动时，距离顶部的距离
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //变量windowHeight是可视区的高度
@@ -86,13 +80,19 @@ export default {
                  //滚动条到底部的条件
       if(scrollTop + windowHeight == scrollHeight) {
         if (!this.initLoading && !this.loading) {
-          console.log('bottom');
           this.onReachBottom()
         }
-      }   
-   }
+      }
+    }
+  },
+  created () {
+    this.getList().then((res) => {
+      this.list = this.list.concat(res.data.data.list)
+      this.initLoading = false
+    })
+    window.addEventListener('scroll', this.scrollHandler, false)
   },
   beforeDestroy () {
-    window.onscroll = null
+    window.removeEventListener('scroll', this.scrollHandler, false)
   }
 }

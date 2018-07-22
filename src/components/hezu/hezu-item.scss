@@ -2,8 +2,9 @@
 * @Author: hwaphon
 * @Date:   2018-07-22 15:45:44
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 16:12:13
+* @Last Modified time: 2018-07-22 17:02:44
 */
+$default-orange-color: #fb8624;
 
 .hezu-item {
   padding: 1.6rem;
@@ -73,8 +74,29 @@
 .hezu-address {
   margin-top: 1.6rem;
   color: #666;
-  
-  span.fa {
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location {
+  span {
     font-size: 1.4rem;
   }
+}
+
+.hezu-contact span {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.fa-star {
+  color: $default-orange-color;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
 }

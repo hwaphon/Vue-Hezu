@@ -2,12 +2,12 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 10:31:01
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 16:13:38
+* @Last Modified time: 2018-07-22 17:15:58
 */
 
 import Menu from '@/components/common/menu.vue'
 import HezuItem from '@/components/hezu/hezu-item.vue'
-import { Toast } from 'vant'
+import MenuConfig from '@/const/menu-config.js'
 
 import API from '@/const/api'
 
@@ -23,6 +23,7 @@ export default {
       page: 0,
       search_value: '',
       searched: false,
+      menus: MenuConfig.hezu_menus
     }
   },
   methods: {
@@ -55,6 +56,20 @@ export default {
         this.loading = false
       })
     },
+    scrollHandler () {
+      //变量scrollTop是滚动条滚动时，距离顶部的距离
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      //变量windowHeight是可视区的高度
+      var windowHeight = document.documentElement.clientHeight || document.body.clientHeight
+      //变量scrollHeight是滚动条的总高度
+      var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight
+                 //滚动条到底部的条件
+      if(scrollTop + windowHeight == scrollHeight) {
+        if (!this.initLoading && !this.loading) {
+          this.onReachBottom()
+        }
+      }
+    }
   },
   components: {
     'fang-menu': Menu,
@@ -65,20 +80,9 @@ export default {
       this.list = this.list.concat(res.data.data.list)
       this.initLoading = false
     })
-
-     window.onscroll = () => {
-       //变量scrollTop是滚动条滚动时，距离顶部的距离
-       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-       //变量windowHeight是可视区的高度
-       var windowHeight = document.documentElement.clientHeight || document.body.clientHeight
-       //变量scrollHeight是滚动条的总高度
-       var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight
-                  //滚动条到底部的条件
-       if(scrollTop + windowHeight == scrollHeight) {
-         if (!this.initLoading && !this.loading) {
-           this.onReachBottom()
-         }
-       }   
-    }
+    window.addEventListener('scroll', this.scrollHandler, false)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.scrollHandler, false)
   }
 }
