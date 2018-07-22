@@ -2,14 +2,14 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 21:17:43
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-21 21:23:45
+* @Last Modified time: 2018-07-22 08:24:50
 */
 .back {
   z-index: 10;
   position: fixed;
-  display: -webkit-box;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 1rem;
   left: 1rem;
   height: 3rem;

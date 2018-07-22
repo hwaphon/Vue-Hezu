@@ -1,10 +1,13 @@
 <template>
   <div class="home tabbar-padding">
-    <van-nav-bar title="房源列表" class="navigation" />
+    <van-search v-model="search_value" show-action placeholder="请输入搜索关键字" @input="clearSearchState">
+      <div slot="action" @click="onSearch" class="search">搜索</div>
+    </van-search>
     <div class="init-loading"  v-if="initLoading">
       <van-loading type="spinner" color="black"/>
       <p>加载中...</p>
     </div>
+    <div class="search-tips" v-if="searched">你搜索的关键词为: {{ search_value }}</div>
     <div class="fang-list">
       <fang-item
         @onClick="onFangClick"

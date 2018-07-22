@@ -2,8 +2,9 @@
 * @Author: hwaphon
 * @Date:   2018-07-22 07:07:08
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 07:56:05
+* @Last Modified time: 2018-07-22 08:13:47
 */
+import Event from '@/const/event'
 export default {
   props: {
     collect: {
@@ -47,6 +48,7 @@ export default {
       } else {
         this.showToast('已取消收藏')
       }
+      this.$emit(Event.CHANGE, { collect: this.collectCopy })
     },
 
     onApplyClick () {
@@ -56,6 +58,7 @@ export default {
       } else {
         this.showToast('已取消申请')
       }
+      this.$emit(Event.CHANGE, { apply: this.applyCopy })
     },
 
     showToast(msg) {

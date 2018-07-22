@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 06:27:39
+* @Last Modified time: 2018-07-22 09:00:37
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -35,7 +35,9 @@ export default {
       // 上拉刷新
       loading: false,
       pagesize: 10,
-      page: 0
+      page: 0,
+      search_value: '',
+      searched: false,
     }
   },
 
@@ -62,6 +64,22 @@ export default {
     },
     routerToFangDetail (id) {
       this.$router.push(`/detail/${id}`)
+    },
+    onSearch () {
+      let value = this.search_value
+      if (value === '') {
+        this.$toast({
+          message: '请输入搜索关键字'
+        })
+        return
+      }
+      this.searched = true
+    },
+    clearSearchState () {
+      if (!this.searched) {
+        return
+      }
+      this.searched = !this.searched
     }
   },
 

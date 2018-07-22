@@ -1,7 +1,7 @@
 <template>
   <div class="fang-detail">
     <back></back>
-    <contact></contact>
+    <contact :tel="detail.tel" :collect="contact.collect" :apply="contact.apply" @onChange="onContactChange"></contact>
     <div class="detail-images">
       <van-swipe :autoplay="3000" class="detail-images-swiper">
         <van-swipe-item v-for="(image, index) in detail.images" :key="index">

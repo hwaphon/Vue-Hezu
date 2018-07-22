@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 16:23:37
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 07:15:10
+* @Last Modified time: 2018-07-22 08:14:16
 */
 import API from '@/const/api.js'
 import Vue from 'vue'
@@ -26,12 +26,19 @@ export default {
       detail: {
         tags: [],
         house_type: {}
+      },
+      contact: {
+        collect: false,
+        apply: false
       }
     }
   },
   methods: {
     getDetail (id) {
       return this.$http(`${API.DETAIL}id=${id}`)
+    },
+    onContactChange (params) {
+      console.log('CONATCT INFO', params)
     }
   },
   components: {
