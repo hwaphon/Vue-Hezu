@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-22 09:21:02
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 11:06:58
+* @Last Modified time: 2018-07-22 12:55:15
 */
 
 $origin-color: #e54b00;
@@ -14,7 +14,9 @@ $origin-color: #e54b00;
   display: flex;
   flex-flow: row nowrap;
   font-size: 1.4em;
-  position: relative;
+  position: sticky;
+  z-index: 99;
+  top: 0;
 }
 
 .menu-item {
@@ -27,7 +29,7 @@ $origin-color: #e54b00;
   background-color: #FFF;
   position: relative;
   border-bottom: 0.1rem solid #E6E6E6;
-  
+
 
   &:not(:last-child)::after {
     content: "";
@@ -44,6 +46,11 @@ $origin-color: #e54b00;
 
 .menu-title {
   margin-right: 0.5rem;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 75%;
 }
 
 .menu-content {
