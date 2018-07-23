@@ -15,7 +15,6 @@ import './assets/vant-css/toast.css'
 import './assets/vant-css/field.css'
 import './assets/vant-css/swipe.css'
 
-
 import 'font-awesome/css/font-awesome.css'
 import _ from 'underscore'
 import axios from 'axios'
