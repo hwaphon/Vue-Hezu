@@ -36,6 +36,7 @@ export default {
 <style>
 html {
   font-size: 62.5%;
+  background-color: #fff;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
