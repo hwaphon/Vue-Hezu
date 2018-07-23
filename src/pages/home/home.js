@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2018-07-21 08:26:16
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2018-07-22 17:14:20
+* @Last Modified time: 2018-07-23 20:54:23
 */
 
 import FangItem from '@/components/home/fang-item.vue'
@@ -11,6 +11,7 @@ import { mapActions } from 'vuex'
 
 import Menu from '@/components/common/menu.vue'
 import MenuConfig from '@/const/menu-config.js'
+import Sorting from '@/components/common/sort.vue'
 
 import { Toast } from 'vant'
 export default {
@@ -25,13 +26,16 @@ export default {
       page: 0,
       search_value: '',
       searched: false,
-      menus: MenuConfig.menus
+      menus: MenuConfig.menus,
+      // 0 默认排序，1 升序 2 降序
+      order: 0
     }
   },
 
   components: {
     'fang-item': FangItem,
-    'fang-menu': Menu
+    'fang-menu': Menu,
+    'fang-sort': Sorting
   },
 
   methods: {
@@ -83,6 +87,28 @@ export default {
           this.onReachBottom()
         }
       }
+    },
+    sortClick () {
+      console.log('SORT CLICK')
+      let now = this.order
+      now = now + 1
+      if (now > 2) {
+        now = 0
+      }
+
+      this.order = now
+      let msg = ''
+      if (now === 0) {
+        msg = '当前数据为默认排序'
+      } else if (now === 1) {
+        msg = '当前数据按照时间升序排序'
+      } else {
+        msg = '当前数据按照时间降序排序'
+      }
+
+      this.$toast({
+        message: msg
+      })
     }
   },
   created () {

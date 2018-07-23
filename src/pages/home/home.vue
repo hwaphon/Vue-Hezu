@@ -29,6 +29,7 @@
       <van-loading type="circular" color="black" size="26px"/>
       <span>拼命加载中...</span>
     </div>
+    <fang-sort @onClick="sortClick"></fang-sort>
   </div>
 </template>
 
