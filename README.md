@@ -34,12 +34,12 @@
 
 ### 提示
 
-1. CSS 单位用 rem， 已将 html 的 font-size 设置为 10px（即以 10px 为基准）
+1. CSS 单位用 `rem`， 已将 `html` 的 `font-size` 设置为 10px（即以 10px 为基准）
 
-2. 当前底部 Tabbar 是全局引入的，如果有的页面不需要展示 Tabbar，将 mixins 目录下的 tabbar_control.js 作为组件的 mixins 属性引入即可（参考 /pages/detail/fang-detail.vue 中的做法）。
+2. 当前底部 `Tabbar` 是全局引入的，如果有的页面不需要展示 `Tabbar`，将 `mixins` 目录下的 `tabbar_control.js` 作为组件的 `mixins` 属性引入即可（参考 `/pages/detail/fang-detail.vue` 中的做法）。
 
-3. 如果需要在页面添加返回按钮，请使用 components/common 下的 back 组件。
+3. 如果需要在页面添加返回按钮，请使用 `components/common` 下的 `back` 组件。
 
-4. 如果要弹出 Toast 提示，可直接使用 this.$toast({ message })，更多自定义属性可参见 Vant 中的 Toast
+4. 如果要弹出 `Toast` 提示，可直接使用 `this.$toast({ message })`，更多自定义属性可参见 `Vant` 中的 `Toast`
 
 
