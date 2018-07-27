@@ -7,5 +7,6 @@
 
 export default {
   'CLICK': 'onClick',
-  'CHANGE': 'onChange'
+  'CHANGE': 'onChange',
+  'MENUSELECT': 'onMenuSelect'
 }

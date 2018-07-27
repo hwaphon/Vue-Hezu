@@ -4,6 +4,7 @@
 * @Last Modified by:   hwaphon
 * @Last Modified time: 2018-07-22 17:13:51
 */
+import Event from '@/const/event'
 
 export default {
   props: {
@@ -17,8 +18,7 @@ export default {
   data () {
     return {
       clickIndex: -1,
-      menuContent: [],
-
+      menuContent: []
     }
   },
   methods: {
@@ -30,9 +30,9 @@ export default {
       this.clickIndex = index
       this.menuContent = this.menus[index].list
     },
-
     selectIndex (index) {
       this.menus[this.clickIndex].selected = index
+      this.$emit(Event.MENUSELECT, [this.clickIndex, index])
       this.closeMenu()
     },
     closeMenu () {

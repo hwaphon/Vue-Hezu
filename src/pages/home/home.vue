@@ -7,7 +7,7 @@
       <van-loading type="spinner" color="black"/>
       <p>加载中...</p>
     </div>
-    <fang-menu :menus="menus"></fang-menu>
+    <fang-menu :menus="menus" @onMenuSelect="onMenuSelect"></fang-menu>
     <div class="search-tips" v-if="searched">你搜索的关键词为: {{ search_value }}</div>
     <div class="fang-list">
       <fang-item

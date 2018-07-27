@@ -28,7 +28,9 @@ export default {
       searched: false,
       menus: MenuConfig.menus,
       // 0 默认排序，1 升序 2 降序
-      order: 0
+      order: 0,
+      selectMenu: [-1, -1, -1, -1],
+      params: ''
     }
   },
 
@@ -42,7 +44,11 @@ export default {
     getList (page = 0) {
       let pagesize = this.pagesize
       this.page = page + 1
-      return this.$http.get(`${API.LIST}page=${page}&pagesize=${pagesize}`, { timeout: 3000 })
+      let params = this.params
+      if (params === '') {
+        return this.$http.get(`${API.LIST}page=${page}&pagesize=${pagesize}&order=${this.order}`)
+      }
+      return this.$http.get(`${API.LIST}page=${page}&pagesize=${pagesize}${params}&order=${this.order}`)
     },
     onReachBottom () {
       this.loading = true
@@ -67,6 +73,41 @@ export default {
         return
       }
       this.searched = true
+      this.setParams()
+      this.initLoading = true
+      this.getList().then((res) => {
+        this.list = res.data.data.list
+        this.initLoading = false
+      })
+    },
+    onMenuSelect (params) {
+      let index = params[0]
+      let value = params[1]
+      this.selectMenu[index] = value
+      this.setParams()
+
+      this.initLoading = true
+      this.getList().then((res) => {
+        this.list = res.data.data.list
+        this.initLoading = false
+      })
+    },
+    setParams () {
+      let menus = this.selectMenu
+      let params = ''
+      if (this.search_value !== '') {
+        params = '&text=' + this.search_value
+      }
+      let length = menus.length
+      let val = ['regin', 'price', 'house_type', 'area']
+
+      for (let i = 0; i < length; i++) {
+        if (menus[i] !== -1) {
+          params += '&' + val[i] + '=' + menus[i]
+        }
+      }
+      console.log(params)
+      this.params = params
     },
     clearSearchState () {
       if (!this.searched) {
@@ -89,7 +130,6 @@ export default {
       }
     },
     sortClick () {
-      console.log('SORT CLICK')
       let now = this.order
       now = now + 1
       if (now > 2) {
@@ -97,6 +137,7 @@ export default {
       }
 
       this.order = now
+
       let msg = ''
       if (now === 0) {
         msg = '当前数据为默认排序'
@@ -106,8 +147,13 @@ export default {
         msg = '当前数据按照时间降序排序'
       }
 
-      this.$toast({
-        message: msg
+      this.initLoading = true
+      this.getList().then((res) => {
+        this.list = res.data.data.list
+        this.initLoading = false
+        this.$toast({
+          message: msg
+        })
       })
     }
   },
