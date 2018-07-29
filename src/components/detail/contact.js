@@ -48,7 +48,7 @@ export default {
       } else {
         this.showToast('已取消收藏')
       }
-      this.$emit(Event.CHANGE, { collect: this.collectCopy })
+      this.$emit(Event.CHANGE, { collect: this.collectCopy ? 1 : 0 })
     },
 
     onApplyClick () {
@@ -58,7 +58,7 @@ export default {
       } else {
         this.showToast('已取消申请')
       }
-      this.$emit(Event.CHANGE, { apply: this.applyCopy })
+      this.$emit(Event.CHANGE, { apply: this.applyCopy ? 1 : 0 })
     },
 
     showToast(msg) {

@@ -99,14 +99,13 @@ export default {
         params = '&text=' + this.search_value
       }
       let length = menus.length
-      let val = ['regin', 'price', 'house_type', 'area']
+      let val = ['regin', 'price', 'room', 'area']
 
       for (let i = 0; i < length; i++) {
         if (menus[i] !== -1) {
           params += '&' + val[i] + '=' + menus[i]
         }
       }
-      console.log(params)
       this.params = params
     },
     clearSearchState () {

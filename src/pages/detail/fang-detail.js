@@ -38,7 +38,15 @@ export default {
       return this.$http(`${API.DETAIL}id=${id}`)
     },
     onContactChange (params) {
-      console.log('CONATCT INFO', params)
+      if (params.hasOwnProperty('apply')) {
+        let apply = params['apply']
+        console.log(apply)
+      }
+
+      if (params.hasOwnProperty('collect')) {
+        let collect = params['collect']
+        console.log(collect)
+      }
     }
   },
   components: {
