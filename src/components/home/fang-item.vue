@@ -19,6 +19,7 @@
         </em>
       </span>
     </div>
+    <slot name="btns"></slot>
   </div>
 </template>
 <style scoped lang="scss">
