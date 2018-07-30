@@ -20,6 +20,7 @@ export default {
     this.getDetail(id).then((res) => {
       this.detail = res.data.data
     })
+    console.log('ONLOAD')
   },
   data () {
     return {

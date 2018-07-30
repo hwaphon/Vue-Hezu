@@ -5,6 +5,7 @@ import Home from '@/pages/home/home.vue'
 import FangDetail from '@/pages/detail/fang-detail.vue'
 import Hezu from '@/pages/hezu/hezu.vue'
 import Publish from '@/pages/publish/publish.vue'
+
 import ShouCang from '@/pages/shoucang/shoucang.vue'
 import User from '@/pages/user/user.vue'
 import WoDeHeZu from '@/pages/wodehezu/wodehezu.vue'
@@ -21,6 +22,11 @@ export default new Router({
       path: '/hezu',
       name: 'Hezu',
       component: Hezu
+    },
+    {
+      path: '/detail/:id',
+      name: 'FangDetail',
+      component: FangDetail
     },
     {
       path: '/publish',
@@ -41,8 +47,7 @@ export default new Router({
       path: '/wodehezu',
       name: 'WoDeHeZu',
       component: WoDeHeZu
-    },
-
+    }
   ],
   scrollBehavior (to, from, savePosition) {
     return { x: 0, y: 0 }

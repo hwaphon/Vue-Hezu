@@ -1,5 +1,7 @@
 
-$height: 200px;
+$default-border-color: #E6E6E6;
+$default-orange-color: #fb8624;
+
 .user-container {
 	display: flex;
 	flex-flow: column;
@@ -7,29 +9,45 @@ $height: 200px;
 	justify-content: center;
 
 	width: 100%;
-	height: 30rem;
+  height: 18rem;
+  background-color: $default-orange-color;
+  color: #FFF;
+  font-size: 1.6rem;
+}
 
-	background-color: gray;
-	img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-  .user-name{
-    font-size:20px;
-    width: 70px;
-    height: 100px;
-    color:#483D8B
-  }
+.user-avatar {
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 100%;
+  border: 0.4rem solid rgba(255,255,255,.5);
+}
 
-  
+.user-name {
+  margin-top: 1.6rem;
+  font-size: 2rem;
 }
 
 .links {
+  color: #444;
+  font-size: 1.6rem;
+  list-style: none;
   li {
-    height: $height;
-    line-height: $height;
-    text-align: center;
-    font-size: 20px;
+    height: 4.2rem;
+    border-bottom: 0.1rem solid #E6E6E6;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    line-height: 4.2rem;
+
+    display: flex;
+    flex-flow: row nowarp;
+    justify-content: space-between;
   }
+
+  span {
+    line-height: 4.2rem;
+  }
+}
+
+.links-item {
+  color: #444;
 }

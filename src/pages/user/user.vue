@@ -2,17 +2,17 @@
 <template>
   <div class="user">
     <div class="user-container">
-    	<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3198678185,878755003&fm=27&gp=0.jpg">
-	    <div class="user-name">
-	    	社会人
-	  	</div>
+    	<img class="user-avatar" src="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/75/66/db/7566dbf3-ea0c-1cea-3cb1-8a25e332dd53/AppIcon-1x_U007emarketing-85-220-0-6.png/246x0w.jpg">
+	    <span class="user-name">一个帅气的网名</span>
     </div>
     <ul class="links">
     	<li>
-	    	<router-link to="/shoucang">我的收藏</router-link>
+	    	<router-link to="/shoucang" class="links-item">我的收藏</router-link>
+        <span class="fa fa-angle-right"></span>
     	</li>
     	<li>
-        <router-link to="/wodehezu">我的合租</router-link>
+        <router-link to="/wodehezu" class="links-item">我的合租</router-link>
+        <span class="fa fa-angle-right"></span>
     	</li>
  	</ul>
 
