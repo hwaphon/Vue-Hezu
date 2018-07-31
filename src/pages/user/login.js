@@ -13,7 +13,12 @@ export default {
       logining: false,
       showLogin: true,
       sexList: ['男', '女'],
-      sexResult: []
+      sexResult: '男',
+      rname: '',
+      rpassword: '',
+      rtel: '',
+      lname: '',
+      lpassword: ''
     }
   },
   components: {
@@ -30,12 +35,16 @@ export default {
       setTimeout(() => {
         Toast.clear()
       }, 5000)
+      console.log(this.lname, this.lpassword)
     },
     onRegisterClick () {
       this.showLogin = false
     },
     onLoginClick () {
       this.showLogin = true
+    },
+    register () {
+      console.log(this.sexResult, this.rtel, this.rname, this.rpassword)
     }
   }
 }
