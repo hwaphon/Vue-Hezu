@@ -1,3 +1,4 @@
+
 .login-bg {
     position: fixed;
     top: 0;
@@ -67,4 +68,43 @@
     text-align: right;
     color: rgba(#fb8624, .9);
     font-size: 1.2rem;
+}
+
+.login-register {
+    position: relative;
+    width: 100%;
+}
+
+.login-container,
+.register-container {
+    position: absolute;
+    width: 100%;
+}
+
+.register-enter,
+.register-leave-to {
+    left: 100%;
+    top: 0;
+}
+
+.register-enter-active,
+.register-leave-active,
+.login-enter-active,
+.login-leave-active {
+    transition: all .3s;
+}
+
+.register-enter-to, 
+.register-leave {
+    left: 0;
+}
+
+.login-enter,
+.login-leave-to {
+    left: -100%;
+}
+
+.login-enter-to,
+.login-leave {
+    left: 0;
 }

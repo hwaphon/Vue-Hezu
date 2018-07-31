@@ -1,4 +1,6 @@
+import TabbarControl from '@/mixins/tabbar_show'
 export default {
+  mixins: [TabbarControl],
   created () {
   },
   data () {
