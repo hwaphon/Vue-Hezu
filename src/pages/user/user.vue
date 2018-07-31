@@ -6,16 +6,15 @@
 	    <span class="user-name">一个帅气的网名</span>
     </div>
     <ul class="links">
-    	<li>
-	    	<router-link to="/shoucang" class="links-item">我的收藏</router-link>
+    	<li @click="onLinkTouch('shoucang')">
+	    	<span class="links-item">我的收藏</span>
         <span class="fa fa-angle-right"></span>
     	</li>
-    	<li>
-        <router-link to="/wodehezu" class="links-item">我的合租</router-link>
+    	<li @click="onLinkTouch('wodehezu')">
+        <span class="links-item">我的合租</span>
         <span class="fa fa-angle-right"></span>
     	</li>
- 	</ul>
-
+   	</ul>
   </div>
 
   
@@ -25,3 +24,4 @@
 <style scoped lang="scss">
   @import "./user.scss";
 </style>
+<script src="./user.js"></script>

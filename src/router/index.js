@@ -8,6 +8,7 @@ import Publish from '@/pages/publish/publish.vue'
 
 import ShouCang from '@/pages/shoucang/shoucang.vue'
 import User from '@/pages/user/user.vue'
+import Login from '@/pages/user/login.vue'
 import WoDeHeZu from '@/pages/wodehezu/wodehezu.vue'
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/user',
       name: 'User',
       component: User
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     },
     {
       path: '/shoucang',

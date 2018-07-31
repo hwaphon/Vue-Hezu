@@ -1,0 +1,70 @@
+@font-face {
+  font-family: HanaleiFill;
+  src: url('./assets/fonts/HanaleiFill-Regular.ttf');
+}
+
+.pull-loading {
+  padding: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.4rem;
+
+  span {
+    margin-left: 0.6rem;
+  }
+}
+
+.init-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8.8rem;
+  height: 8.8rem;
+
+  z-index: 9;
+
+  background-color: rgba(0,0,0,.5);
+  transform: translate(-50%, -50%);
+  border-radius: 0.8rem;
+  color: #FFF;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    margin: 0;
+    margin-top: 0.8rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #fff;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.fa {
+  font-size: 24px;
+}
+
+.tabbar-padding {
+  padding-bottom: 50px;
+}
+
+.van-toast {
+  font-size: 1.6rem;
+}

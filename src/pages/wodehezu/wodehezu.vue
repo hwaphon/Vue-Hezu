@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <div><van-icon @click="back" name="arrow-left" />我</div>
+  <div class="tabbar-padding">
+    <div class="init-loading"  v-if="initLoading">
+      <van-loading type="spinner" color="black"/>
+      <p>加载中...</p>
+    </div>
     <van-tabs v-model="active">
       <van-tab :title="'我申请过的'">
         <div class="fang-list">
@@ -36,17 +39,17 @@
             :price="item.price"
             :image="item.image">
             <div class="van-btn" slot="btns">
-              <van-button type="danger">结束</van-button>
+              <van-button type="danger" class="exit-btn">下架</van-button>
             </div>
           </fang-item>
         </div>
       </van-tab>
     </van-tabs>
+    <div class="pull-loading" v-if="loading">
+      <van-loading type="circular" color="black" size="26px"/>
+      <span>拼命加载中...</span>
+    </div>
   </div>
-</div>
-
-  
-
 </template>
 
 <style scoped lang="scss">

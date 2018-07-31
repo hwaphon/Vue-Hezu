@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 export default {
   created () {
   },
@@ -9,6 +7,9 @@ export default {
     }
   },
   methods: {
+    onLinkTouch (path) {
+      this.$router.push(path)
+    }
   },
   components: {
   }

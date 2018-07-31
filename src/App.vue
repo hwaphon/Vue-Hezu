@@ -33,27 +33,6 @@ export default {
 }
 </script>
 
-<style>
-html {
-  font-size: 62.5%;
-  background-color: #fff;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-.fa {
-  font-size: 24px;
-}
-
-.tabbar-padding {
-  padding-bottom: 50px;
-}
-
-.van-toast {
-  font-size: 1.6rem;
-}
+<style lang="scss">
+  @import "./App.scss";
 </style>

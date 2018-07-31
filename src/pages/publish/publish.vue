@@ -6,7 +6,7 @@
 		 <div class="btns">
 			<van-button @click="submit" size="large">提交</van-button>
 		</div>
-		<van-actionsheet v-model="showAreaSelect" :actions="actions" />
+		<van-actionsheet v-model="showAreaSelect" :actions="actions" class="area-select" />
 	</div>
 </template>
 

@@ -1,0 +1,70 @@
+.login-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#fb8624, .5);
+    z-index: -1;
+}
+
+.login-tips {
+    font-size: 2.8rem;
+    margin-top: 14rem;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    color: #FFF;
+    text-align: center;
+    color: rgba(#fb8624, .9);
+    text-shadow: 0 0 0.4rem #FFF;
+    vertical-align: baseline;
+
+    em {
+        vertical-align: top;
+        font-size: 4.2rem;
+        font-weight: bold;
+        margin-right: 1.2rem;
+        font-family: sans-serif;
+    }
+}
+
+.lr-container {
+    margin-top: 2.8rem;
+    input {
+        display: block;
+        width: 70%;
+        height: 2.8rem;
+        margin: 1.6rem auto;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 0.2rem 0.2rem rgba(#fb8624, .4);
+        padding: 0 1rem;
+        border-radius: 1.4rem;
+
+        &:last-of-type {
+            margin-bottom: 0.8rem;
+        }
+    }
+}
+
+.login-btn, .register-btn {
+    display: block;
+    width: 75%;
+    margin: 1.6rem auto 0;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    text-align: center;
+    line-height: 3.2rem;
+    color: #FFF;
+    background-color: rgba(#fb8624, .6);
+    font-size: 1.6rem;
+}
+
+.lr-container-tips {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    text-align: right;
+    color: rgba(#fb8624, .9);
+    font-size: 1.2rem;
+}
