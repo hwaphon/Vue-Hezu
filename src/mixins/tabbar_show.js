@@ -13,11 +13,7 @@ export default {
     ])
   },
 
-  beforeDestroy () {
-    this.toggleTabbar(true)
-  },
-
   created () {
-    this.toggleTabbar(false)
+    this.toggleTabbar(true)
   }
 }

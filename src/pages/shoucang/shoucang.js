@@ -1,6 +1,7 @@
 import FangItem from '@/components/home/fang-item.vue'
 import Back from '@/components/common/back.vue'
 import API from '@/const/api.js'
+import TabbarControl from '@/mixins/tabbar_show'
 import {
   mapActions
 } from 'vuex'
@@ -9,6 +10,7 @@ import {
   Toast
 } from 'vant'
 export default {
+  mixins: [TabbarControl],
   data() {
     return {
       list: [],

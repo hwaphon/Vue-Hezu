@@ -7,12 +7,12 @@
 import API from '@/const/api.js'
 import Vue from 'vue'
 import { Lazyload } from 'vant'
-import TabbarControl from '@/mixins/tabbar_control'
-Vue.use(Lazyload, {})
-
+import TabbarControl from '@/mixins/tabbar_hidden'
 import Back from '@/components/common/back.vue'
 import Contact from '@/components/detail/contact.vue'
+import UserControl from '@/utils/user-control'
 
+Vue.use(Lazyload, {})
 export default {
   mixins: [TabbarControl],
   created () {
@@ -39,6 +39,15 @@ export default {
       return this.$http(`${API.DETAIL}id=${id}`)
     },
     onContactChange (params) {
+      if (!UserControl.isLogin()) {
+        this.$router.push('/login')
+        this.$toast({
+          message: '请先登录',
+          duration: 1500
+        })
+        return
+      }
+
       if (params.hasOwnProperty('apply')) {
         let apply = params['apply']
         console.log(apply)

@@ -12,9 +12,11 @@ import { mapActions } from 'vuex'
 import Menu from '@/components/common/menu.vue'
 import MenuConfig from '@/const/menu-config.js'
 import Sorting from '@/components/common/sort.vue'
+import TabbarControl from '@/mixins/tabbar_show'
 
 import { Toast } from 'vant'
 export default {
+  mixins: [TabbarControl],
   data () {
     return {
       list: [],

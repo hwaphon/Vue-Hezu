@@ -1,10 +1,12 @@
 import Menu from '@/components/common/menu.vue'
 import HezuItem from '@/components/hezu/hezu-item.vue'
 import MenuConfig from '@/const/menu-config.js'
+import TabbarControl from '@/mixins/tabbar_show'
 
 import API from '@/const/api'
 
 export default {
+  mixins: [TabbarControl],
   data () {
     return {
       list: [],

@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import MenuConfig from '@/const/menu-config.js'
+import TabbarControl from '@/mixins/tabbar_show'
 import {
   Toast
 } from 'vant';
 export default {
-  created() {},
+  mixins: [TabbarControl],
   data() {
     return {
       showAreaSelect: false,
