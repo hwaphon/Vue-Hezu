@@ -18,6 +18,7 @@ import './assets/vant-css/field.css'
 import './assets/vant-css/swipe.css'
 import './assets/vant-css/tab.css'
 import './assets/vant-css/nav-bar.css'
+import './assets/vant-css/checkbox.css'
 
 import 'font-awesome/css/font-awesome.css'
 import _ from 'underscore'

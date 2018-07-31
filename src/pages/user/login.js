@@ -11,7 +11,9 @@ export default {
   data () {
     return {
       logining: false,
-      showLogin: true
+      showLogin: true,
+      sexList: ['男', '女'],
+      sexResult: []
     }
   },
   components: {

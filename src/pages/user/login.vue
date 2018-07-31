@@ -17,8 +17,18 @@
       <transition name="register">
         <div class="register-container" v-if="!showLogin">
           <div class="lr-container">
-            <input type="text" class="login-name" placeholder="请输入用户名">
-            <input type="password" class="login-password" placeholder="请输入密码">
+            <input type="text" class="register-name" placeholder="请输入用户名">
+            <input type="password" class="register-password" placeholder="请输入密码">
+            <input type="tel" class="register-phone" placeholder="请输入手机号">
+            <van-checkbox-group v-model="sexResult">
+              <van-checkbox
+                v-for="(item, index) in sexList"
+                :key="item"
+                :name="item"
+                >
+                复选框 {{ item }}
+              </van-checkbox>
+            </van-checkbox-group>
             <span class="lr-container-tips" @click="onLoginClick">← 返回登录</span>
           </div>
           <span class="login-btn" @click="login">开始注册</span>
