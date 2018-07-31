@@ -1,9 +1,9 @@
 
 <template>
   <div class="user">
-    <div class="user-container">
-    	<img class="user-avatar" src="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/75/66/db/7566dbf3-ea0c-1cea-3cb1-8a25e332dd53/AppIcon-1x_U007emarketing-85-220-0-6.png/246x0w.jpg">
-	    <span class="user-name">一个帅气的网名</span>
+    <div class="user-container" @click="onUserClick">
+    	<img class="user-avatar" :src="avatar">
+	    <span class="user-name">登录 / 注册</span>
     </div>
     <ul class="links">
     	<li @click="onLinkTouch('shoucang')">
