@@ -19,6 +19,7 @@ import './assets/vant-css/swipe.css'
 import './assets/vant-css/tab.css'
 import './assets/vant-css/nav-bar.css'
 import './assets/vant-css/radio.css'
+import './assets/vant-css/picker.css'
 
 import 'font-awesome/css/font-awesome.css'
 import _ from 'underscore'
