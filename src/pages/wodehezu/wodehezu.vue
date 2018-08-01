@@ -1,5 +1,11 @@
 <template>
   <div class="tabbar-padding">
+    <van-nav-bar
+      title="我的合租"
+      left-text="返回"
+      left-arrow
+      @click-left="back"
+    />
     <div class="init-loading"  v-if="initLoading">
       <van-loading type="spinner" color="black"/>
       <p>加载中...</p>

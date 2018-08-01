@@ -1,5 +1,4 @@
 import FangItem from '@/components/home/fang-item.vue'
-import Back from '@/components/common/back.vue'
 import API from '@/const/api.js'
 import TabbarControl from '@/mixins/tabbar_show'
 import {
@@ -24,8 +23,7 @@ export default {
   },
 
   components: {
-    'fang-item': FangItem,
-    'back': Back
+    'fang-item': FangItem
   },
 
   methods: {
