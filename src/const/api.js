@@ -7,5 +7,6 @@
 export default {
   'LIST': 'https://dsn.apizza.net/mock/a1c0fd0348f14cf41adc4283206e87f4/list?',
   'DETAIL': 'https://dsn.apizza.net/mock/a1c0fd0348f14cf41adc4283206e87f4/detail?',
-  'HEZU': 'https://dsn.apizza.net/mock/a1c0fd0348f14cf41adc4283206e87f4/hezu?'
+  'HEZU': 'https://dsn.apizza.net/mock/a1c0fd0348f14cf41adc4283206e87f4/hezu?',
+  'APPLICANTS': 'https://dsn.apizza.net/mock/a1c0fd0348f14cf41adc4283206e87f4/applicants'
 }

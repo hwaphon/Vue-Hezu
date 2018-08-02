@@ -1,0 +1,28 @@
+.list-item {
+  display: flex;
+  flex-flow: row nowarp;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 3rem;
+  line-height: 3rem;
+  color: #444;
+
+  border-bottom: 0.1rem solid #E6E6E6;
+
+  span, a {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  a {
+    color: #fb8624;
+  }
+}
+
+.fixed-item {
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+  z-index: 99;
+}

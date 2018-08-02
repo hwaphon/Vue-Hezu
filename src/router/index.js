@@ -10,6 +10,7 @@ import ShouCang from '@/pages/shoucang/shoucang.vue'
 import User from '@/pages/user/user.vue'
 import Login from '@/pages/user/login.vue'
 import WoDeHeZu from '@/pages/wodehezu/wodehezu.vue'
+import Applicants from '@/pages/wodehezu/list.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -48,6 +49,11 @@ export default new Router({
       path: '/shoucang',
       name: 'ShouCang',
       component: ShouCang
+    },
+    {
+      path: '/applylist',
+      name: 'Applicants',
+      component: Applicants
     },
     {
       path: '/wodehezu',

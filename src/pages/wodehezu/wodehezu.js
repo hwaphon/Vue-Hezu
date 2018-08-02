@@ -53,7 +53,7 @@ export default {
       this.routerToFangDetail(id)
     },
     onTagClick (e) {
-      console.log('tag')
+      this.$router.push('/applylist')
     },
     routerToFangDetail(id) {
       this.$router.push(`/detail/${id}`)
