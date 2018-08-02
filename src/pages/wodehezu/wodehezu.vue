@@ -40,7 +40,7 @@
             :house_type="item.house_type"
             :area="item.area"
             :regin="item.regin"
-            :tags="['正在进行中']"
+            :tags="['已有x人申請']"
             :address="item.address"
             :price="item.price"
             :image="item.image">

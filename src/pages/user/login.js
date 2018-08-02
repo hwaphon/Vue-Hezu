@@ -26,6 +26,12 @@ export default {
   },
   methods: {
     login () {
+      if (!this.lname || !this.lpassword) {
+        this.$toast({
+          message: '有必填信息未填写'
+        })
+        return
+      }
       Toast.loading({
         mask: true,
         message: '登录中...',
@@ -44,7 +50,31 @@ export default {
       this.showLogin = true
     },
     register () {
-      console.log(this.sexResult, this.rtel, this.rname, this.rpassword)
+      if (!this.rtel || !this.rname || !this.rpassword) {
+        this.$toast({
+          message: '有必填信息未填写'
+        })
+        return
+      }
+
+      if (this.checkPhone()) {
+        console.log(this.sexResult, this.rtel, this.rname, this.rpassword)
+        Toast.loading({
+          mask: true,
+          message: '注册中...',
+          duration: 0
+        });
+      }
+    },
+    checkPhone () {
+      if (!(/^1[34578]\d{9}$/.test(this.rtel))) { 
+          this.$toast({
+            message: '手机号格式不合法',
+            duration: 1500
+          })  
+          return false
+      }
+      return true
     }
   }
 }
