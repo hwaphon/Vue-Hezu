@@ -52,6 +52,9 @@ export default {
     onFangClick(id) {
       this.routerToFangDetail(id)
     },
+    onTagClick (e) {
+      console.log('tag')
+    },
     routerToFangDetail(id) {
       this.$router.push(`/detail/${id}`)
     },

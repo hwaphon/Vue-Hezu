@@ -19,7 +19,8 @@ export default {
       tags: '',
       area: '',
       price: '',
-      des: ''
+      des: '',
+      address: ''
     }
   },
   methods: {

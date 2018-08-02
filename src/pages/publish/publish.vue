@@ -5,6 +5,7 @@
 		  <van-field v-model="price" placeholder="请输入房源价格" label="价格" input-align="right" type="number" required/>
 		  <van-field v-model="tags" placeholder="请输入房源标签，以逗号分隔" label="标签" input-align="right" required />
 		  <van-field v-model="area" placeholder="请输入房源面积，单位为平米" label="面积" input-align="right" required />
+		  <van-field v-model="address" placeholder="请输入房源所在小区" label="小区" input-align="right" required />
 		  <van-cell title="年代" :value="formateDate" @click="showDate = !showDate" required />
 		  <van-popup v-model="showDate" position="bottom">
 		  	<van-datetime-picker

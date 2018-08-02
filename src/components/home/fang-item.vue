@@ -13,7 +13,7 @@
         <span class="fang-addr-ab">{{ regin }}&nbsp;&nbsp;{{ address }}</span>
         <label class="fang-price"><em>{{ price }}</em>元/月</label>
       </span>
-      <span class="fang-tags">
+      <span class="fang-tags" @click.stop.prevent="onTagClick">
         <em v-for="(tag, index) in tags" :key="index">
           {{ tag }}
         </em>

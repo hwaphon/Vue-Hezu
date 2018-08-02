@@ -32,6 +32,9 @@ export default {
   methods: {
     onClick () {
       this.$emit(Event.CLICK, this.id)
+    },
+    onTagClick () {
+      this.$emit(Event.TAGCLICK)
     }
   }
 }

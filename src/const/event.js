@@ -7,6 +7,7 @@
 
 export default {
   'CLICK': 'onClick',
+  'TAGCLICK': 'onTagClick',
   'CHANGE': 'onChange',
   'MENUSELECT': 'onMenuSelect'
 }

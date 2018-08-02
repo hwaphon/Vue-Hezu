@@ -33,6 +33,7 @@
         <div class="fang-list">
           <fang-item
             @onClick="onFangClick"
+            @onTagClick="onTagClick"
             v-for="item in list"
             :key="item.id"
             :id="item.id"
