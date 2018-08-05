@@ -2,7 +2,7 @@
   <div class="login">
     <back></back>
     <div class="login-bg"></div>
-    <div class="login-tips css1393e9303b189e7"><em>58</em>合租</div>
+    <div class="login-tips css1393e9303b189e7"><em>99</em>合租</div>
     <div class="login-register">
       <transition name="login">        
         <div class="login-container" v-if="showLogin">
